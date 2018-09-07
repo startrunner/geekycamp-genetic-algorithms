@@ -1,0 +1,29 @@
+<html>
+    <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    </head>
+    <body>
+        <form onsubmit="go(); return false;">
+            <label for="targetString">Target String: </label>
+            <input name="targetString" id="input-targetString" value="bananas"/>
+            <label for="alphabet">Alphabet: </label>
+            <input name="alphabet" id="input-alphabet" type="text" placeholder="Alphabet" value="abcdefghijklmnopqrstuvwxyz"/>
+            <label for="individualsInGeneration">Individuals in Generation: </label>
+            <input name="individualsInGeneration" id="input-individualsInGeneration" type="number" placeholder="Individuals in Generation" value="32"/>
+            <label for="mutationMultiplier">Mutation Chance: </label>
+            <input name="mutationMultiplier" id="input-mutationMultiplier" type="number" placeholder="Mutation Chance" step=".0000001" value="0.15" />
+            <label for="elitism">Elitism: </label>
+            <input name="elitism" id="input-elitism" type="number" value="13"/>
+            <br/><br/>
+            <button id="btn-genesis" type="submit">Genesis</button>
+            <button id="btn-cancel" onclick="cancelling=true;" type="button" disabled>Cancel</button>
+        </form>
+        <textarea style="width: 100%; height: 80%;" id="area-log"></textarea>
+        <div>
+            <label for="autoScroll">Auto Scroll</label>
+            <input name="autoScroll" id="check-autoScroll" type="checkbox"/>
+        </div>
+        <script src="go.js"></script>
+
+    </body>
+</html>
